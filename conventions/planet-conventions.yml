@@ -1,0 +1,35 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.planet.com/develop/apis/
+authentication:
+  style: api-key-or-oauth2
+  detail: >-
+    API key via HTTP Basic (key as username, empty password), an `api-key`
+    Authorization header, or an `api_key` query parameter; or OAuth2 Bearer JWT
+    from login.planet.com.
+  ref: authentication/planet-authentication.yml
+pagination:
+  style: cursor
+  detail: >-
+    List/search responses carry a `_links` object; follow `_links._next` to page
+    forward through results (the Data API item-search paging model). Page size is
+    controlled by a page-size parameter.
+  response_fields: [_links._next]
+idempotency:
+  supported: false
+  detail: No documented idempotency-key mechanism was located during this pass.
+versioning:
+  style: uri-path
+  detail: API version is carried in the URL path (e.g. /data/v1, /subscriptions/v1).
+  ref: lifecycle/planet-lifecycle.yml
+rate_limiting:
+  detail: >-
+    Planet applies per-API rate limits and returns HTTP 429 when a limit is
+    exceeded; clients should back off and retry.
+  status: 429
+geometry:
+  format: GeoJSON
+  detail: Areas of interest and result geometries are expressed as GeoJSON.
+errors:
+  ref: null
+  detail: Standard HTTP status codes; error bodies returned as JSON.

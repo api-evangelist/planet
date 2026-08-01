@@ -1,0 +1,30 @@
+generated: '2026-07-20'
+method: searched
+source: https://github.com/planetlabs/planet-client-python
+docs: https://planet-sdk-for-python.readthedocs.io/
+name: planet
+binary: planet
+package: planet-packages.yml
+install:
+- pip install planet
+- pip install -U planet
+license: Apache-2.0
+description: >-
+  The `planet` command-line interface ships inside the official Planet SDK for
+  Python (v3). It wraps the Planet APIs for search, ordering, subscriptions and
+  delivery workflows directly from the terminal.
+command_groups:
+- name: auth
+  description: Authenticate and manage credentials (API key / OAuth login).
+- name: data
+  description: Search Planet's imagery catalog.
+- name: orders
+  description: Create, download and deliver imagery orders.
+- name: subscriptions
+  description: Set up and manage automated search-and-delivery subscriptions.
+- name: features
+  description: Upload and manage areas of interest (feature collections).
+- name: destinations
+  description: Store and manage cloud-delivery credentials.
+- name: mosaics
+  description: Access and download basemap mosaics.

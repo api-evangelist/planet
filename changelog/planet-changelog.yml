@@ -1,0 +1,34 @@
+generated: '2026-07-20'
+method: searched
+source: https://community.planet.com/product-updates
+docs: https://docs.planet.com/develop/changelog/
+scheme: dated-product-updates
+entries:
+- date: '2026-06-18'
+  title: 'New in Tasking: Set Watchers'
+  highlights: Designate email addresses to receive automatic order notifications.
+  breaking: false
+- date: '2026-05-18'
+  title: Updates to Visual Mosaic Compression
+  highlights: Transition from LZW to JPEG-in-TIFF compression for reduced file sizes.
+  breaking: false
+- date: '2026-05-05'
+  title: Introducing Visual Analysis and SuperRes PlanetScope Scenes
+  highlights: New browser-based imagery tool and AI-powered super-resolution enhancement for PlanetScope data.
+  breaking: false
+- date: '2026-04-23'
+  title: Change to GetCapabilities Response Logic on Planet Insights Platform
+  highlights: Region-specific OGC service endpoints in the GetCapabilities response.
+  breaking: false
+- date: '2026-04-20'
+  title: ARPS v1.1.0
+  highlights: Refined scene compositing and improved radiometric consistency.
+  breaking: false
+- date: '2026-04-15'
+  title: Introducing Tasking Credits for Access to Tasked Imagery
+  highlights: Use Tasking Credits through core delivery tools.
+  breaking: false
+- date: '2026-03-25'
+  title: Planet Launches New Initiative on Planetary Security
+  highlights: New program addressing eight security thematic areas.
+  breaking: false

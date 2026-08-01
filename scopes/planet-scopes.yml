@@ -1,0 +1,35 @@
+generated: '2026-07-20'
+method: searched
+source: https://login.planet.com/.well-known/openid-configuration
+docs: https://docs.planet.com/develop/authentication/
+schemes:
+- name: PlanetOAuth2
+  source: https://docs.planet.com/develop/authentication/
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://login.planet.com/authorize
+    tokenUrl: https://login.planet.com/oauth/token
+  - flow: clientCredentials
+    tokenUrl: https://login.planet.com/oauth/token
+scopes:
+- scope: planet
+  description: Access to all Planet APIs (the primary API-access scope).
+  flows: [authorizationCode, clientCredentials]
+- scope: offline_access
+  description: Issue a refresh token so a user session can be renewed without re-login.
+  flows: [authorizationCode]
+- scope: openid
+  description: OpenID Connect - authenticate the user and return an ID token.
+  flows: [authorizationCode]
+- scope: profile
+  description: Access the user's basic profile claims (name, nickname, picture, etc.).
+  flows: [authorizationCode]
+- scope: email
+  description: Access the user's email address and verification status.
+  flows: [authorizationCode]
+notes: >-
+  Scopes above marked as OIDC identity scopes (openid/profile/email/offline_access)
+  are advertised in the login.planet.com discovery document; `planet` is the
+  documented scope that grants access to the Planet APIs. The authorization server
+  additionally advertises fine-grained OIDC claim scopes (name, given_name,
+  family_name, nickname, phone, address, picture, created_at, identities).

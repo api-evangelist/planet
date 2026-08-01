@@ -1,0 +1,14 @@
+{
+  "repo": "planet",
+  "feeds": [
+    {
+      "source": "https://www.planet.com/pulse/",
+      "feed_url": "https://www.planet.com/pulse/rss/",
+      "title": "",
+      "saved": 4,
+      "method": "discovered"
+    }
+  ],
+  "post_count": 4,
+  "fetched": "2026-07-25T15:00:33Z"
+}

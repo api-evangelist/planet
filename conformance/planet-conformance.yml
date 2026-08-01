@@ -1,0 +1,46 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.planet.com/develop/apis/
+standards:
+- id: oauth2
+  conforms: true
+  evidence: >-
+    OAuth2 authorization-code and client-credentials grants via login.planet.com;
+    RFC 8414 authorization-server metadata published.
+- id: oidc
+  conforms: true
+  evidence: OpenID Connect discovery document published at login.planet.com/.well-known/openid-configuration
+- id: stac
+  conforms: true
+  evidence: >-
+    Data API provides SpatioTemporal Asset Catalog (STAC) support for item and
+    asset search (docs.planet.com STAC Support).
+- id: ogc-api
+  conforms: true
+  evidence: >-
+    Planet exposes OGC API services and OGC WMTS/XYZ tile services (Tiles API, OGC
+    API) for standards-based access to imagery.
+- id: wmts
+  conforms: true
+  evidence: Tiles API provides OGC Web Map Tile Service (WMTS) endpoints.
+- id: geojson
+  conforms: true
+  evidence: Feature geometries and areas of interest are expressed as GeoJSON across the APIs.
+- id: iso-27001
+  conforms: true
+  evidence: 'ISO/IEC 27001:2022 certified (planet.com/security).'
+- id: iso-42001
+  conforms: true
+  evidence: 'ISO/IEC 42001:2023 (AI management system) certified (planet.com/security).'
+- id: iso-9001
+  conforms: true
+  evidence: 'ISO 9001:2015 certified (planet.com/security).'
+- id: cmmc-level-2
+  conforms: true
+  evidence: CMMC Level 2 (planet.com/security).
+- id: uk-cyber-essentials
+  conforms: true
+  evidence: UK Cyber Essentials (planet.com/security).
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: No published use of application/problem+json observed in the docs.

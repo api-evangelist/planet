@@ -1,0 +1,18 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.planet.com/develop/apis/
+versioning:
+  scheme: uri-path
+  detail: >-
+    APIs are versioned in the URL path (Data API v1, Orders API v2, Subscriptions
+    API v1, Tasking API v2, Features API v1, Basemaps API v1).
+  docs: https://docs.planet.com/develop/apis/
+status_page: https://status.planet.com
+changelog: https://docs.planet.com/develop/changelog/
+product_updates: https://community.planet.com/product-updates
+support: https://support.planet.com
+notes: >-
+  Planet maintains a live status page (status.planet.com), a developer changelog
+  (docs.planet.com/develop/changelog), and a product-updates board in the
+  community site. API versions are carried in the URL path; no single formal
+  RFC 8594 Sunset/Deprecation-header policy page was located during this pass.

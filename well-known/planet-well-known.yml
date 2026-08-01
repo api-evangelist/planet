@@ -1,0 +1,33 @@
+generated: '2026-07-20'
+method: searched
+source: live probes of Planet base + auth hosts
+hosts:
+- host: https://login.planet.com
+  documents:
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: planet-openid-configuration.json
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: planet-oauth-authorization-server.json
+- host: https://api.planet.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+- host: https://www.planet.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+notes: >-
+  Planet's OAuth2/OIDC authorization server (Auth0-backed) at login.planet.com
+  publishes full OpenID Connect discovery and RFC 8414 authorization-server
+  metadata. The api.planet.com resource host serves no /.well-known/ discovery
+  documents.

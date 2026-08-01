@@ -1,7 +1,18 @@
 aid: planet
 name: Planet
-description: Planet is a company surfaced as a portfolio company of dcvc and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Planet Labs PBC operates the largest constellation of Earth-imaging satellites,
+  capturing a daily scan of the planet's landmass and delivering that imagery,
+  along with derived Planetary Variables and analytics, through a suite of public
+  developer APIs. The Planet Platform exposes a Data API for searching the imagery
+  catalog, an Orders API for requesting and delivering scenes, a Subscriptions API
+  for continuous cloud delivery, a Basemaps API for mosaics, a Tasking API for
+  commanding high-resolution SkySat and Pelican captures, and a Features API for
+  managing areas of interest. All APIs are served from api.planet.com and secured
+  with API keys (HTTP Basic) or OAuth2/OIDC through login.planet.com. Planet ships
+  an official Python SDK and CLI, an experimental Model Context Protocol server,
+  QGIS and ArcGIS plugins, and a large open-source notebook collection. Planet is a
+  portfolio company of DCVC.
 url: https://raw.githubusercontent.com/api-evangelist/planet/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,14 +20,206 @@ x-backed-by:
 - dcvc
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
+image: https://cdn.sanity.io/images/hvd5n54p/production/e3f218dc0fbfed32b27eca2c22c45fce2586acfb-1920x1080.jpg
 tags:
+- Satellite Imagery
+- Earth Observation
+- Geospatial
+- Remote Sensing
+- Mapping
+- Analytics
+- Location
+- Data
+- GIS
 - Company
-apis: []
+apis:
+- aid: planet:planet-data-api
+  name: Planet Data API
+  tags:
+  - Search
+  - Imagery
+  - Catalog
+  humanURL: https://docs.planet.com/develop/apis/data/
+  baseURL: https://api.planet.com/data/v1
+  properties:
+  - url: https://docs.planet.com/develop/apis/data/
+    type: Documentation
+  - url: https://docs.planet.com/develop/apis/data/reference/
+    type: APIReference
+  description: >-
+    Programmatically search Planet's imagery catalog by geometry, date range,
+    cloud cover and other filters, then discover the items and downloadable assets
+    that match. Supports item search, asset activation, and STAC-based access.
+- aid: planet:planet-orders-api
+  name: Planet Orders API
+  tags:
+  - Orders
+  - Delivery
+  - Imagery
+  humanURL: https://docs.planet.com/develop/apis/orders/
+  baseURL: https://api.planet.com
+  properties:
+  - url: https://docs.planet.com/develop/apis/orders/
+    type: Documentation
+  - url: https://docs.planet.com/develop/apis/orders/reference/
+    type: APIReference
+  description: >-
+    Request downloads and cloud delivery of Planet imagery, apply raster and band
+    tools (clipping, harmonization, composites), and deliver results to cloud
+    storage destinations.
+- aid: planet:planet-subscriptions-api
+  name: Planet Subscriptions API
+  tags:
+  - Subscriptions
+  - Delivery
+  - Streaming
+  humanURL: https://docs.planet.com/develop/apis/subscriptions/
+  baseURL: https://api.planet.com
+  properties:
+  - url: https://docs.planet.com/develop/apis/subscriptions/
+    type: Documentation
+  - url: https://docs.planet.com/develop/apis/subscriptions/reference/
+    type: APIReference
+  description: >-
+    Set up continuous, hands-off cloud delivery of new imagery and Planetary
+    Variables for an area of interest as it becomes available.
+- aid: planet:planet-basemaps-api
+  name: Planet Basemaps API
+  tags:
+  - Basemaps
+  - Mosaics
+  - Imagery
+  humanURL: https://docs.planet.com/develop/apis/basemaps/
+  baseURL: https://api.planet.com
+  properties:
+  - url: https://docs.planet.com/develop/apis/basemaps/
+    type: Documentation
+  - url: https://docs.planet.com/develop/apis/basemaps/reference/
+    type: APIReference
+  description: >-
+    Access and download Planet's global and regional basemap mosaics, list series
+    and quads, and retrieve mosaic metadata.
+- aid: planet:planet-tasking-api
+  name: Planet Tasking API
+  tags:
+  - Tasking
+  - Satellites
+  - Imagery
+  humanURL: https://docs.planet.com/develop/apis/tasking/
+  baseURL: https://api.planet.com
+  properties:
+  - url: https://docs.planet.com/develop/apis/tasking/
+    type: Documentation
+  - url: https://docs.planet.com/develop/apis/tasking/reference/
+    type: APIReference
+  description: >-
+    Command high-resolution SkySat and Pelican satellites to capture new imagery
+    of a target, manage tasking orders, and track capture status.
+- aid: planet:planet-features-api
+  name: Planet Features API
+  tags:
+  - Features
+  - AOI
+  - Geospatial
+  humanURL: https://docs.planet.com/develop/apis/features/
+  baseURL: https://api.planet.com
+  properties:
+  - url: https://docs.planet.com/develop/apis/features/
+    type: Documentation
+  - url: https://docs.planet.com/develop/apis/features/reference/
+    type: APIReference
+  description: >-
+    Save and manage reusable areas of interest (feature collections) that can be
+    referenced across the Data, Orders, Subscriptions and Tasking APIs.
+common:
+- url: https://docs.planet.com
+  type: DeveloperPortal
+- url: https://docs.planet.com/develop/apis/
+  type: Documentation
+- url: https://docs.planet.com/develop/apis/data/reference/
+  type: APIReference
+- url: https://docs.planet.com/guides/
+  type: GettingStarted
+- url: https://docs.planet.com/develop/authentication/
+  type: Authentication
+- url: https://docs.planet.com/develop/sdks/
+  type: SDKs
+- url: https://docs.planet.com/develop/changelog/
+  type: ChangeLog
+- url: https://status.planet.com
+  type: StatusPage
+- url: https://support.planet.com
+  type: Support
+- url: https://community.planet.com
+  type: Community
+- url: https://www.planet.com/pricing/
+  type: Pricing
+- url: https://www.planet.com/terms-of-use/
+  type: TermsOfService
+- url: https://www.planet.com/privacy/
+  type: PrivacyPolicy
+- url: https://github.com/planetlabs
+  type: GitHubOrganization
+- url: https://www.planet.com/pulse/
+  type: Blog
+- url: https://www.linkedin.com/company/planet-labs
+  type: LinkedIn
+- url: packages/planet-packages.yml
+  type: Packages
+- url: packages/planet-packages.yml
+  type: SDKs
+- url: cli/planet-cli.yml
+  type: CLI
+- url: mcp/planet-mcp.yml
+  type: MCPServer
+- url: llms/planet-llms.txt
+  type: LLMsTxt
+- url: well-known/planet-well-known.yml
+  type: WellKnown
+- url: authentication/planet-authentication.yml
+  type: Authentication
+- url: scopes/planet-scopes.yml
+  type: OAuthScopes
+- url: conventions/planet-conventions.yml
+  type: Conventions
+- url: conformance/planet-conformance.yml
+  type: Conformance
+- url: lifecycle/planet-lifecycle.yml
+  type: Lifecycle
+- url: changelog/planet-changelog.yml
+  type: ChangeLog
+- url: security/planet-domain-security.yml
+  type: DomainSecurity
+- url: security/planet-vulnerability-disclosure.yml
+  type: VulnerabilityDisclosure
+- url: https://www.planet.com/security/
+  type: Security
+- url: security/planet-trust-center.yml
+  type: TrustCenter
+- url: https://www.planet.com/security/
+  type: Compliance
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 16
+  pass: local-v1
