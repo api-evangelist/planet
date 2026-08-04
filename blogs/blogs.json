@@ -2,13 +2,20 @@
   "repo": "planet",
   "feeds": [
     {
+      "source": "https://www.planet.com/pulse/rss/",
+      "feed_url": "https://www.planet.com/pulse/rss/",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    },
+    {
       "source": "https://www.planet.com/pulse/",
       "feed_url": "https://www.planet.com/pulse/rss/",
       "title": "",
-      "saved": 4,
+      "saved": 0,
       "method": "discovered"
     }
   ],
-  "post_count": 4,
-  "fetched": "2026-07-25T15:00:33Z"
+  "post_count": 50,
+  "fetched": "2026-08-01T15:49:00Z"
 }
